@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Timestamp</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+    
+        socket.on('connect', function() {
+            console.log('Socket connected!');
+        });
+    
+        socket.on('timestamp', function() {
+            console.log('Received');
+        });
+    </script>
+</head>
+<body>
+    <h1>Open the browser console</h1>
+</body>
+</html>
