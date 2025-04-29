@@ -13,7 +13,7 @@ thread = None
 def index():
     return render_template('index_socket.html')
 
-def send_time():
+def send_flight_data():
     while True:
         print(time.ctime())
 
@@ -28,7 +28,7 @@ def send_time():
 def on_connect():
     global thread
     if thread is None:
-        thread = socketio.start_background_task(send_time)
+        thread = socketio.start_background_task(send_flight_data)
     print('Client connected')
 
 if __name__ == '__main__':
@@ -38,8 +38,8 @@ if __name__ == '__main__':
 """
 To-do:
 
-get active flights via OpenSky API every <n> seconds
-send that data to console every <n> seconds
+x get active flights via OpenSky API every <n> seconds
+x send that data to console every <n> seconds
 then work on mapping
 
 """
