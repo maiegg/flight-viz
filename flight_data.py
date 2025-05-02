@@ -78,3 +78,15 @@ def parse_flights(states):
             flights.append(flight)
 
     return flights
+
+"""
+Example usage:
+
+import time
+
+flights = fetch_flights()
+if flights:
+    flights_parsed = parse_flights(flights['states'])
+
+time.sleep(5) # wait desired interval before repeating query
+"""

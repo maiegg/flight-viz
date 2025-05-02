@@ -33,13 +33,3 @@ def on_connect():
 
 if __name__ == '__main__':
     socketio.run(app, host="127.0.0.1", port=5000)
-
-
-"""
-To-do:
-
-x get active flights via OpenSky API every <n> seconds
-x send that data to console every <n> seconds
-then work on mapping
-
-"""
